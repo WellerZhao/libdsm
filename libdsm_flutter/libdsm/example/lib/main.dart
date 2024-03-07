@@ -90,55 +90,55 @@ class _MyAppState extends State<MyApp> {
         body: Column(
           // <Widget> is the type of items in the list.
           children: <Widget>[
-            RaisedButton(
+            MaterialButton(
               onPressed: _create,
               child: Text('create'),
             ),
-            RaisedButton(
+            MaterialButton(
               onPressed: _release,
               child: Text('release'),
             ),
-            RaisedButton(
+            MaterialButton(
               onPressed: _startDiscovery,
               child: Text('startDiscovery'),
             ),
-            RaisedButton(
+            MaterialButton(
               onPressed: _stopDiscovery,
               child: Text('stopDiscovery'),
             ),
-            RaisedButton(
+            MaterialButton(
               onPressed: _resolve,
               child: Text('resolve'),
             ),
-            RaisedButton(
+            MaterialButton(
               onPressed: _inverse,
               child: Text('inverse'),
             ),
-            RaisedButton(
+            MaterialButton(
               onPressed: _login,
               child: Text('login'),
             ),
-            RaisedButton(
+            MaterialButton(
               onPressed: _logout,
               child: Text('logout'),
             ),
-            RaisedButton(
+            MaterialButton(
               onPressed: _getShareList,
               child: Text('getShareList'),
             ),
-            RaisedButton(
+            MaterialButton(
               onPressed: _treeConnect,
               child: Text('treeConnect'),
             ),
-            RaisedButton(
+            MaterialButton(
               onPressed: _treeDisconnect,
               child: Text('treeDisconnect'),
             ),
-            RaisedButton(
+            MaterialButton(
               onPressed: _find,
               child: Text('find'),
             ),
-            RaisedButton(
+            MaterialButton(
               onPressed: _fileStatus,
               child: Text('fileStatus'),
             ),
