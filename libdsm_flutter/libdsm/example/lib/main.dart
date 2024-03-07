@@ -55,13 +55,14 @@ class _MyAppState extends State<MyApp> {
   }
 
   void _getShareList() async {
-    await dsm.getShareList();
+    var list = await dsm.getShareList();
+    print(list.toString());
   }
 
   int tid = 0;
 
   void _treeConnect() async {
-    tid = await dsm.treeConnect("F");
+    tid = await dsm.treeConnect("jimmy");
   }
 
   void _treeDisconnect() async {
@@ -70,14 +71,16 @@ class _MyAppState extends State<MyApp> {
   }
 
   void _find() async {
-    String result = await dsm.find(tid, "\\*");
+    var result = await dsm.find(tid, "\\*");
 
-    result = await dsm.find(tid, "\\splayer\\splayer_soundtouch\\*");
+    result = await dsm.find(tid, "\\Documents\\*");
+    print(result);
   }
 
   void _fileStatus() async {
-    String result =
-        await dsm.fileStatus(tid, "\\splayer\\splayer_soundtouch\\Test.cpp");
+    var result =
+        await dsm.fileStatus(tid, "\\Documents\\code.zip");
+    print(result);
   }
 
   @override

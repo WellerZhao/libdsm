@@ -130,13 +130,12 @@ class Dsm {
   /// starting with a $ are supposed to be system/hidden share.
   ///
   /// @return An a json list.
-  Future<String> getShareList() async {
+  Future<Map?> getShareList() async {
     if (_dsmId == null) {
-      return "";
+      return null;
     }
-    String listJson = await _methodChannel
+    return await _methodChannel
         .invokeMethod('DSM_get_share_list', <String, dynamic>{'id': _dsmId});
-    return listJson;
   }
 
   /// Connects to a SMB share
@@ -178,11 +177,11 @@ class Dsm {
   /// 'afolder' directory.
   ///
   /// @return An json list of files.
-  Future<String> find(int tid, String pattern) async {
+  Future<Map?> find(int tid, String pattern) async {
     if (_dsmId == null) {
-      return "";
+      return null;
     }
-    String resultJson = await _methodChannel.invokeMethod('DSM_find',
+    var resultJson = await _methodChannel.invokeMethod('DSM_find',
         <String, dynamic>{'id': _dsmId, 'tid': tid, 'pattern': pattern});
     return resultJson;
   }
@@ -194,11 +193,11 @@ class Dsm {
   ///
   /// @return An opaque smb_stat or NULL in case of error. You need to
   /// destory this object with smb_stat_destroy after usage.
-  Future<String> fileStatus(int tid, String path) async {
+  Future<Map?> fileStatus(int tid, String path) async {
     if (_dsmId == null) {
-      return "";
+      return null;
     }
-    String resultJson = await _methodChannel.invokeMethod('DSM_file_status',
+    var resultJson = await _methodChannel.invokeMethod('DSM_file_status',
         <String, dynamic>{'id': _dsmId, 'tid': tid, 'path': path});
     return resultJson;
   }

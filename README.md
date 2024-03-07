@@ -10,7 +10,7 @@ https://videolabs.github.io/libdsm/
 * Android 21+
 * iOS 10.0+
 * Unity
-* Flutter(Android、iOS) 1.12.13+
+* Flutter(Android、iOS) 3.19.1+
 
 # Licenses
 
