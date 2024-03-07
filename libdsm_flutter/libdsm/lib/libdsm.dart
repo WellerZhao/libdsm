@@ -104,7 +104,7 @@ class Dsm {
     int result =
         await _methodChannel.invokeMethod('DSM_login', <String, dynamic>{
       'id': _dsmId,
-      'host': host,
+      'hostName': host,
       'login_name': loginName,
       'password': password,
     });
